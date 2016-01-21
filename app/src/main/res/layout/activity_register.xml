@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
 
+
     <TextView
         android:layout_width="wrap_content"
         android:text="Mot de passe"
@@ -23,14 +24,37 @@
 
     <EditText
         android:id="@+id/etPassword"
+        android:layout_width="match_parent"
         android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Age"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Mail"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
     <Button
-        android:id="@+id/ButtonLogin"
-        android:text="GO"
+        android:id="@+id/ButtonRegister"
+        android:text="S'inscrire"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -8,14 +8,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:text="Nom d'utilisateur"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,26 +24,14 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
         android:inputType="textPassword"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Age"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/etAge"
-        android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
 
     <Button
-        android:id="@+id/ButtonRegister"
-        android:text="S'inscrire"
+        android:id="@+id/ButtonLogin"
+        android:text="GO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
