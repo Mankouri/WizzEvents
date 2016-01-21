@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="esiea.wizzevents" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,6 +27,10 @@
         <activity
             android:name=".Register"
             android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name=".User"
+            android:label="@string/title_activity_user" >
         </activity>
     </application>
 
