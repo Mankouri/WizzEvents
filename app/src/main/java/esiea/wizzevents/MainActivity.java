@@ -1,5 +1,6 @@
 package esiea.wizzevents;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -36,7 +37,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v){
         switch (v.getId()){
             case R.id.bLogout:
-
+                startActivity(new Intent(this, Login.class));
                 break;
 
             case R.id.bMap:
