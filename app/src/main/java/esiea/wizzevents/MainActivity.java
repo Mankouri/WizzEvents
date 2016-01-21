@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/* PST4 - CHESNAIS BERDAOUI GULL MANKOURI */
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     Button bLogout, bMap, bInterest;
