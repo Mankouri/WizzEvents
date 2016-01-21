@@ -40,21 +40,21 @@
         android:layout_marginBottom="10dp"/>
 
     <Button
-    android:id="@+id/ButtonInterest"
+    android:id="@+id/bInterest"
     android:text="Mes préférences (ou réglages)"
     android:layout_marginTop="15dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/ButtonMap"
+        android:id="@+id/bMap"
         android:text="Ou suis-je ? (Google Map)"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/ButtonLogout"
+        android:id="@+id/bLogout"
         android:text="Se deconnecter"
         android:layout_marginTop="70dp"
         android:layout_width="match_parent"
