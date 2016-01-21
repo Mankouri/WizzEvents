@@ -25,7 +25,7 @@ import java.util.ArrayList;
  */
 public class ServeurRequests {
     ProgressDialog progressDialog;
-    public static final int CONNECTION_TIMEOUT = 1000 * 15;
+    public static final int CONNECTION_TIMEOUT = 100000 * 15;
     public static final String SERVER_ADDRESS ="http://wizzeventsbis.site88.net/";
 
     public ServeurRequests(Context context){
