@@ -124,7 +124,7 @@ public class ServeurRequests {
                 if(jObject.length() == 0){
                     user = null;
                 }else{
-                    String mail = jObject.getString("username");
+                    String mail = jObject.getString("mail");
                     int age = jObject.getInt("age");
 
                     returnedUser = new User(user.username, user.password, mail, age);
