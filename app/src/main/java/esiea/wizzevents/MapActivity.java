@@ -43,6 +43,8 @@ public class MapActivity extends AppCompatActivity implements
      * Define a request code to send to Google Play services This code is
      * returned in Activity.onActivityResult
      */
+
+
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
     @Override
