@@ -4,6 +4,20 @@
     <string name="title_activity_register">WizzEvents</string>
     <string name="title_activity_user">User</string>
 
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+    <string name="notification">WizzEvents continuera à vous envoyer des notifications en fonction de votre position.</string>
+
+    <string name="yesContinu">Continuer de recevoir des notifications</string>
+    <string name="noStopAll">Ne plus recevoir de notifications</string>
+
+    <string name="really_quit">Voulez-vous réellement quitter WizzEvents ?</string>
+    <string name="quit">WizzEvents</string>
+
+    <string name="logout">WizzEvents</string>
+    <string name="really_logout">Voulez-vous réellement vous déconnecter ?</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

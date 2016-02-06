@@ -1,8 +1,11 @@
 package esiea.wizzevents;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,7 +46,30 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         if (authenticate() == true){
             displayUserDetails();
         }else{
-            startActivity(new Intent(MainActivity.this, Login.class));
+            AlertDialog show = new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle(R.string.quit)
+                    .setMessage(R.string.notification)
+                    .setPositiveButton(R.string.yesContinu, new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Stop the activity
+                            startActivity(new Intent(MainActivity.this, Login.class));
+                        }
+
+                    })
+                    .setNegativeButton(R.string.noStopAll, new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Stop the activity
+                            MainActivity.this.finish();
+                        }
+
+                    })
+                    .show();
+            /*  startActivity(new Intent(MainActivity.this, Login.class)); */
         }
     }
 
@@ -71,12 +97,45 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.bMap:
-
+                startActivity(new Intent(this, MapActivity.class));
                 break;
 
             case R.id.bInterest:
 
                 break;
+        }
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        //Handle the back button
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            //Ask the user if they want to quit
+            AlertDialog show = new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle(R.string.logout)
+                    .setMessage(R.string.really_logout)
+                    .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            //On se déconnecte
+                            userLocalStore.clearUserData();
+                            userLocalStore.setUserLoggedIn(false);
+                            MainActivity.this.finish();
+                            startActivity(new Intent(MainActivity.this, Login.class));
+
+                        }
+
+                    })
+                    .setNegativeButton(R.string.no, null)
+                    .show();
+
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
     }
 }
