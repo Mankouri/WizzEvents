@@ -26,6 +26,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,11 +46,6 @@
         <activity
             android:name="esiea.wizzevents.MapActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <uses-library android:required="true" android:name="com.google.android.maps" />
@@ -63,6 +59,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"
         />
+
 
 
     </application>
