@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:text="Soldes / Reduction"
+    android:id="@+id/checkBox2"
+    android:layout_gravity="left"
+    android:checked="true"
+    android:layout_marginRight="20dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignRight="@+id/buttonValidPref"
+    android:layout_alignEnd="@+id/buttonValidPref" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Festival"
+
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/buttonValidPref"
+        android:layout_toEndOf="@+id/buttonValidPref" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:id="@+id/buttonValidPref"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/checkBox2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/buttonValidPref" />
+</RelativeLayout>

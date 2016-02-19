@@ -101,7 +101,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.bInterest:
-
+                startActivity(new Intent(this, PrefActivity.class));
                 break;
         }
     }

@@ -41,14 +41,14 @@
 
     <Button
     android:id="@+id/bInterest"
-    android:text="Mes préférences (ou réglages)"
+    android:text="Mes préférences"
     android:layout_marginTop="15dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/bMap"
-        android:text="Ou suis-je ? (Google Map)"
+        android:text="Carte"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
