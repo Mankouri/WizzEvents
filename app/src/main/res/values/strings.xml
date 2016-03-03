@@ -18,6 +18,6 @@
     <string name="logout">WizzEvents</string>
     <string name="really_logout">Voulez-vous réellement vous déconnecter ?</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world</string>
     <string name="action_settings">Settings</string>
 </resources>
