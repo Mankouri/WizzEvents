@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
 
     <CheckBox
     android:layout_width="wrap_content"
@@ -11,21 +14,19 @@
     android:id="@+id/checkBox2"
     android:layout_gravity="left"
     android:checked="true"
-    android:layout_marginRight="20dp"
-    android:layout_alignParentTop="true"
-    android:layout_alignRight="@+id/buttonValidPref"
-    android:layout_alignEnd="@+id/buttonValidPref" />
+        android:layout_below="@+id/spinner2"
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Festival"
-
+        android:text="Divertissements"
         android:id="@+id/checkBox"
         android:checked="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/buttonValidPref"
-        android:layout_toEndOf="@+id/buttonValidPref" />
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
 
     <Button
@@ -34,12 +35,65 @@
         android:text="Valider"
         android:id="@+id/buttonValidPref"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/checkBox2"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_above="@+id/buttonValidPref" />
+        android:layout_above="@+id/buttonValidPref"
+        android:layout_alignTop="@+id/buttonValidPref" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Culture"
+        android:id="@+id/checkBox3"
+        android:checked="true"
+        android:layout_below="@+id/spinner"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner3"
+        android:layout_below="@+id/checkBox3"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport"
+        android:id="@+id/checkBox4"
+        android:checked="true"
+        android:layout_below="@+id/spinner3"
+        android:layout_alignLeft="@+id/spinner3"
+        android:layout_alignStart="@+id/spinner3" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner4"
+        android:layout_below="@+id/checkBox4"
+        android:layout_alignLeft="@+id/checkBox4"
+        android:layout_alignStart="@+id/checkBox4" />
 </RelativeLayout>
