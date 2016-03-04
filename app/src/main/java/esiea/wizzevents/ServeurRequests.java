@@ -63,6 +63,8 @@ public class ServeurRequests {
             dataToSend.add(new BasicNameValuePair("mail", user.mail));
             dataToSend.add(new BasicNameValuePair("age", user.age + ""));
 
+
+
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams,CONNECTION_TIMEOUT);
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -127,7 +129,12 @@ public class ServeurRequests {
                     String mail = jObject.getString("mail");
                     int age = jObject.getInt("age");
 
-                    returnedUser = new User(user.username, user.password, mail, age);
+                    int divertissement = jObject.getInt("divertissement");
+                    int solde = jObject.getInt("solde");
+                    int culture = jObject.getInt("culture");
+                    int sport = jObject.getInt("sport");
+
+                    returnedUser = new User(user.username, user.password, mail, age, divertissement,solde,culture,sport);
 
                 }
 

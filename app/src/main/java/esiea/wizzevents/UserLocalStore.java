@@ -22,6 +22,11 @@ public class UserLocalStore {
         spEditor.putString("mail",user.mail);
         spEditor.putInt("age",user.age);
 
+        spEditor.putInt("divertissement",user.divertissement);
+        spEditor.putInt("solde",user.solde);
+        spEditor.putInt("culture",user.culture);
+        spEditor.putInt("sport",user.sport);
+
         spEditor.commit();
     }
 
@@ -31,7 +36,12 @@ public class UserLocalStore {
         String mail = userLocalDatabase.getString("mail","");
         int age = userLocalDatabase.getInt("age",-1);
 
-        User storedUser = new User(username,password,mail,age);
+        int divertissement = userLocalDatabase.getInt("divertissement",0);
+        int solde = userLocalDatabase.getInt("solde",0);
+        int culture = userLocalDatabase.getInt("culture",0);
+        int sport = userLocalDatabase.getInt("sport",0);
+
+        User storedUser = new User(username,password,mail,age,divertissement,solde,culture,sport);
 
         return storedUser;
     }

@@ -30,6 +30,19 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 public class MapActivity extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -41,6 +54,9 @@ public class MapActivity extends AppCompatActivity implements
     private LocationRequest mLocationRequest;
     private long UPDATE_INTERVAL = 60000;  /* 60 secs */
     private long FASTEST_INTERVAL = 5000; /* 5 secs */
+    public static final int CONNECTION_TIMEOUT = 100000 * 15;
+    public static final String SERVER_ADDRESS ="http://wizzeventsbis.site88.net/";
+    UserLocalStore userLocalStore;
 
     /*
      * Define a request code to send to Google Play services This code is
@@ -210,12 +226,44 @@ public class MapActivity extends AppCompatActivity implements
                 mLocationRequest, this);
     }
 
+
+
     public void onLocationChanged(Location location) {
         // Report to the UI that the location was updated
         String msg = "Updated Location: " +
                 Double.toString(location.getLatitude()) + "," +
                 Double.toString(location.getLongitude());
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+
+
+        Date maDate = new Date();
+
+
+        ArrayList<NameValuePair> dataToSend = new ArrayList<>();
+        dataToSend.add(new BasicNameValuePair("date", maDate.toString()));
+        dataToSend.add(new BasicNameValuePair("user", "mankouri"));
+        dataToSend.add(new BasicNameValuePair("poslat", Double.toString(location.getLatitude())));
+        dataToSend.add(new BasicNameValuePair("poslng", Double.toString(location.getLongitude())));
+
+
+
+        HttpParams httpRequestParams = new BasicHttpParams();
+        HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
+        HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
+
+        HttpClient client = new DefaultHttpClient(httpRequestParams);
+        HttpPost post = new HttpPost(SERVER_ADDRESS + "PositionSave.php");
+
+        try {
+            post.setEntity(new UrlEncodedFormEntity(dataToSend));
+            client.execute(post);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        String msgsave = "Database location save... ";
+        Toast.makeText(this, msgsave, Toast.LENGTH_SHORT).show();
 
     }
 
