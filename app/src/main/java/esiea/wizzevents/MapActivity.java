@@ -3,6 +3,7 @@ package esiea.wizzevents;
 /**
  * Created by Jalil on 06/02/2016.
  */
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -25,7 +26,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapActivity extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -80,10 +83,29 @@ public class MapActivity extends AppCompatActivity implements
                     .addOnConnectionFailedListener(this).build();
 
             connectClient();
+
+            map.addMarker(new MarkerOptions()
+                    .position(new LatLng(49.15, 2.70))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                    .title("Maison de Jalil"));
+
+            map.addMarker(new MarkerOptions()
+                    .position(new LatLng(48.814281, 2.378042))
+                    .snippet("Samedi 12 mars 2016 : 3ème JPO de l’ESIEA sur le campus de Paris")
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                    .title("JPO ESIEA"));
+
+
+
+
+
+
         } else {
             Toast.makeText(this, "Error - Map was null!!", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
     protected void connectClient() {
         // Connect the client.
