@@ -1,11 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:orientation="vertical"
     android:padding="10dp"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
-
     <TextView
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:text="Inscription"
+        android:textSize="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:text="Nom d'utilisateur"
         android:layout_height="wrap_content" />
@@ -14,10 +22,11 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="15dp"/>
 
 
     <TextView
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:text="Mot de passe"
         android:layout_height="wrap_content" />
@@ -27,9 +36,10 @@
         android:layout_width="match_parent"
         android:inputType="textPassword"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="15dp"/>
 
     <TextView
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:text="Age"
         android:layout_height="wrap_content" />
@@ -38,9 +48,10 @@
         android:id="@+id/etAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="15dp"/>
 
     <TextView
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:text="Mail"
         android:layout_height="wrap_content" />
@@ -50,12 +61,14 @@
         android:layout_width="match_parent"
         android:inputType="textEmailAddress"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="40dp"/>
 
     <Button
         android:id="@+id/bRegister"
         android:text="S'inscrire"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"/>
 
 </LinearLayout>
