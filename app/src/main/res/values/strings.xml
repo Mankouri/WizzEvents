@@ -20,4 +20,35 @@
 
     <string name="hello_world">Hello world !!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="divertissements">
+        <item>Festival</item>
+        <item>Concert</item>
+        <item>Carnaval</item>
+        <item>Foire</item>
+    </string-array>
+
+    <string-array name="soldes">
+        <item>Vêtements</item>
+        <item>Lingeries</item>
+        <item>Accessoires</item>
+        <item>Maroquinerie</item>
+    </string-array>
+
+    <string-array name="culture">
+        <item>Exposition</item>
+        <item>Musée</item>
+    </string-array>
+
+    <string-array name="sport">
+        <item>Football</item>
+        <item>Basketball</item>
+        <item>Natation</item>
+        <item>Equitation</item>
+        <item>Golf</item>
+        <item>Tennis</item>
+        <item>Boxe</item>
+        <item>Rugby</item>
+    </string-array>
+
 </resources>
