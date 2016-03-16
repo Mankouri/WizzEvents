@@ -6,6 +6,8 @@ package esiea.wizzevents;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.location.Location;
@@ -85,6 +87,22 @@ public class MapActivity extends AppCompatActivity implements
 
     }
 
+    private final void createNotification(){
+        final NotificationManager mNotification = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        final Intent launchNotifiactionIntent = new Intent(this, MapActivity.class);
+
+
+        Notification.Builder builder = new Notification.Builder(this)
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.drawable.abc_ic_voice_search_api_mtrl_alpha)
+                .setContentTitle(getResources().getString(R.string.Notification_title))
+                .setContentText(getResources().getString(R.string.Notification_desc))
+                .setAutoCancel(true);
+
+        mNotification.notify(001, builder.build());
+    }
+
     protected void loadMap(GoogleMap googleMap) {
         map = googleMap;
         if (map != null) {
@@ -99,7 +117,7 @@ public class MapActivity extends AppCompatActivity implements
                     .addOnConnectionFailedListener(this).build();
 
             connectClient();
-
+            createNotification();
             map.addMarker(new MarkerOptions()
                     .position(new LatLng(49.15, 2.70))
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
@@ -107,7 +125,7 @@ public class MapActivity extends AppCompatActivity implements
 
             map.addMarker(new MarkerOptions()
                     .position(new LatLng(48.814281, 2.378042))
-                    .snippet("Samedi 12 mars 2016 : 3ème JPO de l’ESIEA sur le campus de Paris.")
+                    .snippet("Samedi 16 mars 2016 : PST 4A WizzEvents ESIEA.")
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
                     .title("JPO ESIEA"));
 

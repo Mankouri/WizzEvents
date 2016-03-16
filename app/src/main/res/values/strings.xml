@@ -35,6 +35,10 @@
         <item>Maroquinerie</item>
     </string-array>
 
+    <string name="Notification">WizzEvents</string>
+    <string name="Notification_title">WizzEvents : PST 4A WizzEvents ESIEA.</string>
+    <string name="Notification_desc">Cliquez ici pour obtenir plus d'information !</string>
+
     <string-array name="culture">
         <item>Exposition</item>
         <item>Musée</item>
