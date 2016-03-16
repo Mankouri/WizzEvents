@@ -6,6 +6,14 @@
     android:paddingTop="16dp"
     android:paddingBottom="16dp">
 
+    <TextView
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:text="Préférences"
+        android:textSize="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_gravity="center" />
     <CheckBox
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -14,9 +22,9 @@
     android:id="@+id/checkBox2"
     android:layout_gravity="left"
     android:checked="true"
-        android:layout_below="@+id/spinner2"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
+        android:layout_above="@+id/spinner"
+        android:layout_alignRight="@+id/checkBox"
+        android:layout_alignEnd="@+id/checkBox" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -24,7 +32,7 @@
         android:text="Divertissements"
         android:id="@+id/checkBox"
         android:checked="true"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/spinner2"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView" />
 
@@ -33,6 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
+        android:textColor="@color/white"
+        android:background="@color/blue"
         android:id="@+id/buttonValidPref"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
@@ -49,17 +59,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
-        android:layout_below="@+id/checkBox2"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_alignStart="@+id/checkBox2" />
+        android:layout_above="@+id/checkBox3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner2"
-        android:layout_below="@+id/checkBox"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_alignStart="@+id/checkBox2" />
+        android:layout_above="@+id/checkBox2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -67,17 +77,17 @@
         android:text="Culture"
         android:id="@+id/checkBox3"
         android:checked="true"
-        android:layout_below="@+id/spinner"
-        android:layout_alignLeft="@+id/spinner"
-        android:layout_alignStart="@+id/spinner" />
+        android:layout_above="@+id/spinner3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner3"
-        android:layout_below="@+id/checkBox3"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_above="@+id/checkBox4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -85,15 +95,16 @@
         android:text="Sport"
         android:id="@+id/checkBox4"
         android:checked="true"
-        android:layout_below="@+id/spinner3"
-        android:layout_alignLeft="@+id/spinner3"
-        android:layout_alignStart="@+id/spinner3" />
+        android:layout_above="@+id/spinner4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner4"
-        android:layout_below="@+id/checkBox4"
-        android:layout_alignLeft="@+id/checkBox4"
-        android:layout_alignStart="@+id/checkBox4" />
+        android:layout_above="@+id/buttonValidPref"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp" />
 </RelativeLayout>
