@@ -96,8 +96,8 @@ public class MapActivity extends AppCompatActivity implements
         Notification.Builder builder = new Notification.Builder(this)
                 .setWhen(System.currentTimeMillis())
                 .setSmallIcon(R.drawable.abc_ic_voice_search_api_mtrl_alpha)
-                .setContentTitle(getResources().getString(R.string.Notification_title))
-                .setContentText(getResources().getString(R.string.Notification_desc))
+                .setContentTitle("WizzEvents : PST 4A WizzEvents ESIEA.")
+                .setContentText("Cliquez ici pour obtenir plus d'information !")
                 .setAutoCancel(true);
 
         mNotification.notify(001, builder.build());
